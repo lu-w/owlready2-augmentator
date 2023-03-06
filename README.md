@@ -14,9 +14,9 @@ The functions are mapped to the to-be-augmented concepts from the OWL by using f
 
 ## Interface
 
-The augmentation can then be triggered by calling `owl_augmentator.do_augmentation()`, which takes the to-be-agumented 
+The augmentation can then be triggered by calling `owlready2_augmentator.do_augmentation()`, which takes the to-be-agumented 
 ontologies as its argument. If the module has performed an augmentation before, multiple augmentations are avoided
-(calling `owl_augmentator.do_augmentation()` is hence idempotent). Note that this library only performs slight type 
+(calling `owlready2_augmentator.do_augmentation()` is hence idempotent). Note that this library only performs slight type 
 checks. It is therefore the user's responsibility to ensure correct typing.
 
 ## Specifying Augmentations
