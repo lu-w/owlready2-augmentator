@@ -8,4 +8,4 @@ setup(
     author_email="lukas.westhofen@dlr.de",
     py_modules=["owl_augmentator"],
     install_requires=["owlready2"]
-    )
+)
