@@ -6,7 +6,7 @@ The functions are mapped to the to-be-augmented concepts from the OWL by using f
 
 # Installation
 
-`pip install -e .`
+`pip install .`
 
 # Usage
 
