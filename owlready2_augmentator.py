@@ -67,9 +67,14 @@ def concepts(*args):
 # Utils #
 #########
 
+def get_type_hints_without_return(cls, func):
+    h = get_type_hints(getattr(cls, func.split(".")[-1]))
+    if "return" in h.keys():
+        h.pop("return")
+    return h.values()
 
 def get_tuple_classes(cls, func):
-    type_hints = list(get_type_hints(getattr(cls, func.split(".")[-1])).values())
+    type_hints = list(get_type_hints_without_return(cls, func))
     if len(type_hints) > 0:
         dom_cls = type_hints[0]
     else:
@@ -78,7 +83,7 @@ def get_tuple_classes(cls, func):
 
 
 def get_triple_classes(cls, func):
-    type_hints = list(get_type_hints(getattr(cls, func.split(".")[-1])).values())
+    type_hints = list(get_type_hints_without_return(cls, func))
     if len(type_hints) > 0:
         dom_cls_1 = type_hints[0]
         if len(type_hints) > 1:
