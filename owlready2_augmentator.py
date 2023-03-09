@@ -331,3 +331,14 @@ def do_augmentation(*ontologies: owlready2.Ontology) -> (int, set):
                             new_individuals = new_individuals.union(insts)
                     changes += c
     return changes, new_individuals
+
+
+def reset():
+    """
+    Resets the caching such that the augmentation can be performed again completely from scratch if do_augmentation() is
+    called.
+    """
+    _CREATED_OBJECT_PROPERTIES = dict()
+    _CREATED_REIFIED_DATA_PROPERTIES = dict()
+    _CREATED_REIFIED_OBJECT_PROPERTIES = dict()
+    get_search_space.cache_clear()

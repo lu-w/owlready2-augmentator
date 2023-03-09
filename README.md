@@ -6,7 +6,7 @@ The functions are mapped to the to-be-augmented concepts from the OWL by using f
 
 # Installation
 
-`pip install -e .`
+Call `pip install .` from this folder after cloning this repository.
 
 # Usage
 
@@ -14,10 +14,10 @@ The functions are mapped to the to-be-augmented concepts from the OWL by using f
 
 ## Interface
 
-The augmentation can then be triggered by calling `owlready2_augmentator.do_augmentation()`, which takes the to-be-agumented 
+The augmentation can be triggered by calling `owlready2_augmentator.do_augmentation()`, which takes the to-be-agumented 
 ontologies as its argument. If the module has performed an augmentation before, multiple augmentations are avoided
-(calling `owlready2_augmentator.do_augmentation()` is hence idempotent). Note that this library only performs slight type 
-checks. It is therefore the user's responsibility to ensure correct typing.
+(calling `owlready2_augmentator.do_augmentation()` is hence idempotent). Note that this library only performs slight 
+type checks. It is therefore the user's responsibility to ensure correct typing.
 
 ## Specifying Augmentations
 
